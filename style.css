@@ -57,6 +57,7 @@ body {
 #new-quote {
     width: 130px;
     color: white;
+    background-color: #3e341c;
     border: none;
     cursor: pointer;
     font-size: 1em;
@@ -70,6 +71,10 @@ body {
     cursor: pointer;
     font-size: 1em;
     line-height: 1.2;
+    /*
+    float: right;
+    justify-content: flex-end
+    */
 }
 
 

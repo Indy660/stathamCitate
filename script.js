@@ -6,7 +6,7 @@ let authorName = document.querySelector("#quote-author");
 let newQuoteButton = document.querySelector("#new-quote");
 let showAgain = document.querySelector("#show-again");
 
-quoteText.textContent="Здесь собрана полная коллекция цитат философа \n  Джейсона Стейтема"
+quoteText.textContent="Здесь собрана полная коллекция цитат философа \n  Джейсона Стейтема";
 
 let themesSources=[
     "http://2d.by/wallpapers/d/dzheyson_stethem.jpg",
@@ -42,14 +42,16 @@ function prepareImages() {
 
     images.sort((a, b) => Math.random() - 0.5);
     quotes.sort((a, b) => Math.random() - 0.5);
+    images.push("http://hq-wallpapers.ru/wallpapers/1/hq-wallpapers_ru_mens_3559_1920x1080.jpg");
+    quotes.push("Стетхэм, да ты задолбал нести фигню!")
 }
 
 function changeTheme() {
-    showAgain.style="display:none";
-    newQuoteButton.style="display:block";
-    authorName.textContent ="Jason Statham";
+    showAgain.style = "display:none";
+    newQuoteButton.style = "display:block";
+    authorName.textContent = "Jason Statham";
 
-   if (!images.length) prepareImages();
+    if (!images.length) prepareImages();
 
     let deletedImages = images.splice(0, 1);
     let deletedQuotes = quotes.splice(0, 1);
@@ -59,7 +61,18 @@ function changeTheme() {
 
     document.body.style.backgroundImage = 'url(' + image + ')';
     quoteText.textContent = quote;
+    if (!images.length) {
+        authorName.textContent = "Bruce Willis";
+        showAgain.style="display:block";
+        newQuoteButton.style = "display:none";
+    }
+}
 
+newQuoteButton.addEventListener('click', changeTheme);
+showAgain.addEventListener('click', changeTheme);
+
+
+/*
     if (!images.length) {
         newQuoteButton.addEventListener('click', lastMessage)
     }
@@ -73,8 +86,4 @@ function lastMessage() {
     showAgain.style="display:block";
 }
 
-newQuoteButton.addEventListener('click', changeTheme);
-showAgain.addEventListener('click', changeTheme);
-
-
-
+ */
