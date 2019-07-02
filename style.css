@@ -23,7 +23,7 @@ body {
     margin: 0 0 0 -275px;
     padding: 40px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 #quote-text {

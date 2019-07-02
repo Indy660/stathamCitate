@@ -6,7 +6,7 @@ let authorName = document.querySelector("#quote-author");
 let newQuoteButton = document.querySelector("#new-quote");
 let showAgain = document.querySelector("#show-again");
 
-quoteText.textContent="Здесь собрана полная коллекция цитат философа \n  Джейсона Стейтема";
+quoteText.textContent="Здесь собрана полная коллекция цитат \n знаменитого философа 21 века \n  Джейсона Стейтема";
 
 let themesSources=[
     "http://2d.by/wallpapers/d/dzheyson_stethem.jpg",
